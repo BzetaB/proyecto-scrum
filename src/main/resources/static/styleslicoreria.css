@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fondo general oscuro */
+    color: #fff; /* Color de texto blanco */
+}
+
+header {
+    background-color: #000; /* Fondo negro de la cabecera */
+    color: #fff;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.logo1 img {
+    height: 85px;
+    
+}
+
+.title-container {
+    flex-grow: 1; /* Expande este contenedor para ocupar el espacio restante */
+    text-align: center; /* Centra el texto */
+}
+
+.title {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 20px 0; /* Añade relleno arriba y abajo */
+}
+
+.title h1 {
+    font-size: 1.5em; /* Tamaño de fuente para el título principal */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.title p {
+    font-size: 1.2em; /* Tamaño de fuente para el subtítulo */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+
+//* Estilo para las tarjetas de productos */
+ .card {
+     margin: 1rem;
+     width: 18rem;
+     border: 1px solid #ddd;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+     transition: transform 0.2s ease;
+ }
+
+ .card:hover {
+     transform: scale(1.05);
+ }
+
+ .card-img-top {
+     width: 100%;
+     height: 200px; /* Ajusta la altura según prefieras */
+     object-fit: cover; /* Mantiene la proporción de la imagen */
+     border-bottom: 1px solid #ddd;
+ }
+
+ .card-body {
+     padding: 1rem;
+     text-align: center;
+ }
+
+ /* Estilo para las secciones */
+ .section {
+     margin-bottom: 2em;
+ }
+
+ /* Estilo para los títulos de las secciones (h3) */
+ .section h3 {
+     display: inline-block; /* Ajusta el título para que el fondo sea solo el ancho del texto */
+     background-color: #000; /* Color de fondo del título */
+     color: #ffffff; /* Color del texto */
+     padding: 0.5em 1em; /* Espacio alrededor del texto */
+     border-radius: 5px; /* Esquinas redondeadas para el fondo */
+     text-align: center; /* Centra el texto dentro del título */
+     margin: 0 auto; /* Centra el título dentro del contenedor */
+     width: fit-content; /* Ajusta el ancho al contenido del texto */
+ }
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según prefieras */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.products-section {
+    scroll-margin-top: 90px; /* Ajusta este valor según la altura de tu menú */
+}
+
+.products-section {
+    padding-top: 80px; /* Ajusta este valor según la altura de tu menú */
+    margin-top: -80px; /* El mismo valor negativo para compensar el margen */
+}
+
+/* Estilo para las secciones */
+.section {
+    scroll-margin-top: 90px; /* Ajusta este valor según la altura de tu menú */
+}
+.section {
+    padding-top: 80px; /* Ajusta este valor según la altura de tu menú */
+    margin-top: -80px; /* El mismo valor negativo para compensar el margen */
+}
+
+
+#productosContainer {
+    margin-bottom: 2rem;
+}
+
+/* Estilo para el contenedor de las tarjetas */
+.d-flex {
+    gap: 1rem;
+}
+
+
+
+
+#search-btn:hover {
+    background-color: #c82333; /* Color de fondo del botón al pasar el mouse */
+    border-color: #bd2130; /* Color del borde del botón al pasar el mouse */
+    color: #fff; /* Color del texto del botón al pasar el mouse */
+}
+
+.login {
+    display: flex;
+}
+
+.login button {
+    margin-left: 1em;
+    background-color: #0973fefb;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #000; /* Fondo negro del menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #f9f9f9;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li:hover > a {
+    background-color: #f80707; /* Color de fondo al pasar el cursor */
+}
+
+nav ul .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #555; /* Color de fondo del submenu */
+}
+
+
+.search {
+    margin-left: auto; /* Empuja el botón de búsqueda hacia la derecha */
+    margin-right: 2em; /* Espacio a la derecha para separar */
+}
+
+.search button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+main {
+    background-image: url('/images/fondo11.jpeg');
+    background-size: cover; /* Cubre todo el área del elemento */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    background-attachment: fixed; /* Fija la imagen en su posición */
+    padding: 2em;
+}
+
+
+
+section {
+    margin-bottom: 2em;
+}
+
+section p{
+    background-color: rgb(255, 255, 255);
+}
+section h2 {
+    display: inline-block; /* Cambiar de 'block' a 'inline-block' */
+    background-color: #000;
+    color: #ffffff; /* Color para los títulos de sección de los licores */
+    padding: 0.5em 1em; /* Añadir un poco de relleno para separar el texto del fondo */
+}
+
+.product {
+    display: inline-block;
+    width: 200px;
+    margin: 1em;
+    text-align: center;
+    background-color: hsl(0, 0%, 0%); /* Color de fondo de los productos */
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(248, 248, 248, 0.953);
+}
+.productinicio {
+    display: block;
+    width: 100%;
+    margin: 1em 0; /* Ajusta los márgenes superior e inferior */
+    text-align: center;
+    background-color: hsl(0, 0%, 0%); /* Color de fondo de los productos */
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(248, 248, 248, 0.953);
+    color: white; /* Para que el texto sea visible sobre el fondo negro */
+}
+
+.product img {
+    width: 70%;
+    height: auto;
+    border-bottom: 1px solid #1ca563;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000; /* Fondo negro del pie de página */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer a {
+    color: #fb0f0f;
+    text-decoration: none;
+}
+
+.cart {
+    position: fixed;
+    top: 30%;
+    right: 2em;
+    transform: translateY(-50%);
+    background-color: #efefef; /* Color de fondo del carrito */
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.985); /* color de sombreado del fondo*/
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cart img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.cart p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.cart-content {
+    display: none;
+    margin-top: 1em;
+}
+
+.cart-content h3 {
+    margin-top: 0;
+}
+
+.cart-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-content label {
+    margin-bottom: 0.5em;
+}
+
+.cart-content input,
+.cart-content select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.cart-content button {
+    background-color: #1a1a1a; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-content button:hover {
+    background-color: #333; /* Color de fondo al pasar el cursor */
+}

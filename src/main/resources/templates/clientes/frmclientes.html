@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script th:src="@{/js/web/backoffice/clientes/frmclientes.js}"
+        type="text/javascript"></script>
+<nav th:replace="~{layout::menu}"></nav>
+<div class="card">
+    <div class="card-header">
+        Mantenimiento de Clientes
+    </div>
+    <div class="card-body">
+        <div id="divmensaje"></div>
+        <table id="tblclientes" class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID Cliente</th>
+                <th scope="col">Documento</th>
+                <th scope="col">N° Documento</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Username</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="clientes :${listclientes}">
+                <td th:text="${clientes.idcliente}"></td>
+                <td th:text="${clientes.tipodocumento}"></td>
+                <td th:text="${clientes.documento}"></td>
+                <td th:text="${clientes.nombres}"></td>
+                <td th:text="${clientes.apellidos}"></td>
+                <td th:text="${clientes.telefono}"></td>
+                <td th:text="${clientes.correo}"></td>
+                <td th:text="${clientes.fechanacimiento}"></td>
+                <td th:text="${clientes.sexo}"></td>
+                <td th:text="${clientes.direccion}"></td>
+                <td th:text="${clientes.username}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorería Whisky</title>
+    <link rel="stylesheet" href="styleslicoreria.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1K0v06CCqb2UgHpa4vYO8U5K+9KaNn8d/E1EAqepO0LfKbGe4n3/6xGvOVzmRox" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-1K0v06CCqb2UgHpa4vYO8U5K+9KaNn8d/E1EAqepO0LfKbGe4n3/6xGvOVzmRox" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+    <script src="/js/jquery/jquery.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo1">
+            <img src="/images/logo1.jpg" alt="Logo de Licorerías Wando">
+        </div>
+        <div class="title-container">
+            <div class="title">
+                <h1>Licoreria Whisky</h1>
+                <p>SI LO PRUEBAS NO LO DEJAS</p>
+            </div>
+        </div>
+        <div class="login">
+            <button id="login-btn" class="btn btn-danger">Iniciar Sesión</button>
+            <button id="register-btn" class="btn btn-danger">Registrarse</button>
+        </div>
+        <div class="cart">
+            <button id="cart-btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fas fa-shopping-cart"></i> Carrito
+            </button>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#todos">Todos los Licores</a></li>
+            <li><a href="#rones">Rones</a></li>
+            <li><a href="#espumantes">Espumantes</a></li>
+            <li><a href="#whiskies">Whiskies</a></li>
+            <li><a href="#vodkas">Vodkas</a></li>
+            <li><a href="#vinos">Vinos</a></li>
+            <li><a href="#piscos">Piscos</a></li>
+            <li><a href="#tequilas">Tequilas</a></li>
+        </ul>
+
+    </nav>
+</header>
+<nav>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/carrito">
+                <img src="/images/carrito.jpg" alt="Carrito" width="30" height="30">
+                <span>Carrito</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<section id="inicio" class="products-section">
+    <h2>INICIO</h2>
+    <div class="products-container">
+        <div class="productinicio">
+            <h3>Bienvenido a la licorería Whisky, sírvase a navegar por la página y espero disfrute de los productos y ofertas que tenemos para usted</h3>
+        </div>
+    </div>
+</section>
+<main class="container mt-4">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h2>Productos Disponibles</h2>
+        </div>
+        <div id="todos" class="section">
+            <h3>Todos los Licores</h3>
+            <div id="todosContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="rones" class="section">
+            <h3>Rones</h3>
+            <div id="ronesContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="espumantes" class="section">
+            <h3>Espumantes</h3>
+            <div id="espumantesContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="whiskies" class="section">
+            <h3>Whiskies</h3>
+            <div id="whiskiesContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="vodkas" class="section">
+            <h3>Vodkas</h3>
+            <div id="vodkasContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="vinos" class="section">
+            <h3>Vinos</h3>
+            <div id="vinosContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="piscos" class="section">
+            <h3>Piscos</h3>
+            <div id="piscosContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+        <div id="tequilas" class="section">
+            <h3>Tequilas</h3>
+            <div id="tequilasContainer" class="d-flex flex-wrap justify-content-start"></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <div>
+            <p>Acerca de nosotros</p>
+            <p> Descubre Licorería Whisky, tu destino para bebidas premium y exclusivas. Nos enorgullece ofrecer una cuidadosa selección de licores y vinos de alta calidad, garantizando una experiencia de compra excepcional para nuestros clientes. Explora nuestro catálogo y déjate sorprender por nuestra pasión por la excelencia en cada botella.</p>
+            <p>Dirección</p>
+            <p>Encuéntranos en [Dirección], donde nos esforzamos por ofrecerte un servicio personalizado y un ambiente acogedor. Visítanos para encontrar la bebida perfecta para cualquier ocasión, desde eventos especiales hasta momentos de relajación. Únete a nuestra comunidad de amantes del buen gusto y descubre por qué somos la elección preferida en [Ciudad].</p>
+        </div>
+    </div>
+</footer>
+
+<div id="cartModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="cart-list" class="list-group">
+                    <!-- Aquí se añadirán los productos del carrito dinámicamente -->
+                </ul>
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button class="btn btn-danger">Finalizar Compra</button>
+                <button id="continue-shopping" class="btn btn-primary">Continuar</button> <!-- Nuevo botón -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tu script personalizado -->
+
+<script src="licoreria.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+
+<!-- Enlace a jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<!-- Enlace a Popper.js (requerido por Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<!-- Enlace a Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7n5Q30S1ZwHf5mLZk8T7tE2c5f5d5gXh36B" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

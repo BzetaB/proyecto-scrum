@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script th:src="@{/js/web/backoffice/producto/frmproducto.js}"
+        type="text/javascript"></script>
+<nav th:replace="~{layout::menu}"></nav>
+<div class="card">
+    <div class="card-header">
+        Mantenimiento de Productos
+    </div>
+    <div class="card-body">
+        <button type="button" class="btn btn-primary" id="btnagregar">Agregar</button>
+        <hr />
+        <div id="divmensaje"></div>
+        <table id="tblproducto" class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Detalles</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Habilitado</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Actualizar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="producto :${listproducto}">
+                <td th:text="${producto.idproducto}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.nomcategoria}"></td>
+                <td th:text="${producto.precio}"></td>
+                <td th:text="${producto.detalles}"></td>
+                <td th:text="${producto.unidades}"></td>
+                <td th:text="${producto.activo}"></td>
+                <td th:text="${producto.stock}"></td>
+                <td>
+                    <button type="button" class="btn btn-info btnactualizar"
+                            th:data-prodid="${producto.idproducto}"
+                            th:data-prodnom="${producto.nombre}"
+                            th:data-prodcat="${producto.idcategoria}"
+                            th:data-prodprecio="${producto.precio}"
+                            th:data-proddetalles="${producto.detalles}"
+                            th:data-produnidades="${producto.unidades}"
+                            th:data-prodactivo="${producto.activo}"
+                            th:data-prodstock="${producto.stock}">Actualizar</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalproducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Producto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control"
+                           id="txtnombreproducto" placeholder="name@example.com">
+                    <label for="txtnombreproducto">Nombre del producto</label>
+                </div>
+                <div class="mb-3">
+                    <label for="cbocategoria">Selecciona la categoría</label>
+                    <select id="cbocategoria" class="form-control"></select>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control"
+                           id="txtprecioproducto" placeholder="name@example.com">
+                    <label for="txtprecioproducto">Precio del producto</label>
+                </div>
+                <div class="mb-3">
+                    <label for="txtdetalle">Detalles del producto</label>
+                    <textarea class="form-control" id="txtdetalle" rows="3"></textarea>
+                </div>
+                <div class="mb-3" style="width: 150px;">
+                    <label for="unidades">Unidades</label>
+                    <input type="number" id="unidades" class="form-control text-center" value="1" min="1">
+                </div>
+                <div class="form-check form-switch" id="switchproducto">
+                    <input class="form-check-input" type="checkbox"
+                           role="switch" id="cbactivo">
+                    <label class="form-check-label" for="cbactivo">
+                        Habilitado</label>
+                </div>
+                <input type="hidden" id="hddstock" value="0">
+                <input type="hidden" id="hddidprod" value="0">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cerrar</button>
+                <button id="btnguardar"
+                        type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
